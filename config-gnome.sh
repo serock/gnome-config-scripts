@@ -4,6 +4,7 @@ gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
 
 gsettings set org.gnome.desktop.background picture-options 'scaled'
 gsettings set org.gnome.desktop.background picture-uri "'file://${HOME}/.local/share/backgrounds/night.jpg'"
+gsettings set org.gnome.desktop.background picture-uri-dark "'file://${HOME}/.local/share/backgrounds/night.jpg'"
 gsettings set org.gnome.desktop.background primary-color '#475b52'
 gsettings set org.gnome.desktop.background secondary-color '#475b52'
 
@@ -27,7 +28,6 @@ gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.ui statusbar-visible true
 
 gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
-gsettings set org.gnome.nautilus.preferences search-view 'list-view'
 gsettings set org.gnome.nautilus.preferences thumbnail-limit 5
 
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
@@ -37,7 +37,7 @@ gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 23
 
 gsettings reset org.gnome.settings-daemon.plugins.media-keys custom-keybindings
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Primary><Alt>t'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Control><Alt>t'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'gnome-terminal'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Terminal'
 
@@ -51,7 +51,6 @@ gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Naut
 
 gsettings set org.gnome.shell.weather automatic-location false
 gsettings set org.gnome.shell.weather locations "[<(uint32 2, <('Wilkes-Barre', 'KAVP', true, [(0.72149972216646618, -1.3216796707113367)], [(0.7198770197477169, -1.3243786653199134)])>)>]"
-gsettings set org.gnome.Weather automatic-location false
 gsettings set org.gnome.Weather locations "[<(uint32 2, <('Wilkes-Barre', 'KAVP', true, [(0.72149972216646618, -1.3216796707113367)], [(0.7198770197477169, -1.3243786653199134)])>)>]"
 
 gsettings set org.gnome.software download-updates false
