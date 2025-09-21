@@ -1,14 +1,11 @@
-#!/usr/bin/bash
+#!/bin/bash
 gsettings set org.gtk.Settings.FileChooser sort-directories-first true
 gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
 
 gsettings set org.gnome.desktop.background picture-options 'scaled'
 gsettings set org.gnome.desktop.background picture-uri "'file://${HOME}/.local/share/backgrounds/night.jpg'"
 gsettings set org.gnome.desktop.background picture-uri-dark "'file://${HOME}/.local/share/backgrounds/night.jpg'"
-gsettings set org.gnome.desktop.background primary-color '#475b52'
-gsettings set org.gnome.desktop.background secondary-color '#475b52'
 
-gsettings set org.gnome.desktop.interface clock-format '12h'
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 
 gsettings set org.gnome.desktop.privacy recent-files-max-age 30
@@ -20,14 +17,17 @@ gsettings set org.gnome.desktop.session idle-delay 600
 
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
 
-gsettings set org.gnome.gedit.preferences.editor auto-indent true
-gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
-gsettings set org.gnome.gedit.preferences.editor highlight-current-line true
 gsettings set org.gnome.gedit.preferences.editor insert-spaces true
 gsettings set org.gnome.gedit.preferences.editor tabs-size 4
-gsettings set org.gnome.gedit.preferences.ui statusbar-visible true
+
+gsettings set org.gnome.TextEditor highlight-current-line true
+gsettings set org.gnome.TextEditor show-line-numbers true
+gsettings set org.gnome.TextEditor indent-style 'space'
+gsettings set org.gnome.TextEditor indent-width 4
+gsettings set org.gnome.TextEditor tab-width 4
 
 gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
+gsettings set org.gnome.nautilus.preferences show-image-thumbnails 'never'
 gsettings set org.gnome.nautilus.preferences thumbnail-limit 5
 
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
@@ -47,9 +47,8 @@ gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-tim
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 
 gsettings set org.gnome.shell disable-user-extensions true
-gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Music.desktop']"
+gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'chromium-browser.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Music.desktop']"
 
-gsettings set org.gnome.shell.weather automatic-location false
 gsettings set org.gnome.shell.weather locations "[<(uint32 2, <('Wilkes-Barre', 'KAVP', true, [(0.72149972216646618, -1.3216796707113367)], [(0.7198770197477169, -1.3243786653199134)])>)>]"
 gsettings set org.gnome.Weather locations "[<(uint32 2, <('Wilkes-Barre', 'KAVP', true, [(0.72149972216646618, -1.3216796707113367)], [(0.7198770197477169, -1.3243786653199134)])>)>]"
 
