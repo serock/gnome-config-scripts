@@ -56,6 +56,11 @@ gsettings set org.gnome.software download-updates false
 gsettings set org.gnome.software download-updates-notify true
 
 gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
+profile_uuid=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${profile_uuid}/ use-theme-colors false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${profile_uuid}/ background-color '#000000'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${profile_uuid}/ foreground-color '#dfdfdf'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${profile_uuid}/ palette "['#000000', '#cb0000', '#00cd00', '#cfcf00', '#5e86d6', '#ce00ce', '#00a0ce', '#cfcfcf', '#767676', '#ff5e5e', '#00ff00', '#ffff00', '#70a0ff', '#ff28ff', '#00b2ff', '#ffffff']"
 
 if [[ ! -d ~/.local/share/icons/Adwaita/scalable/mimetypes ]]; then
     mkdir -p ~/.local/share/icons/Adwaita/scalable/mimetypes
